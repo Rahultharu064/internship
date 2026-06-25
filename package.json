@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.1",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.1"
+  },
+  "name": "intership",
+  "version": "1.0.0",
+  
+ 
+  "scripts": {
+    "run": "day5.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rahultharu064/internship.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Rahultharu064/internship/issues"
+  },
+  "homepage": "https://github.com/Rahultharu064/internship#readme"
+}

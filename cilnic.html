@@ -1,586 +1,74 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HealthCare Clinic Management System</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#f8fafc;
-    color:#333;
-    line-height:1.6;
-}
-
-/* Header */
-
-header{
-    background:linear-gradient(135deg,#0f766e,#0891b2);
-    color:white;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo{
-    font-size:28px;
-    font-weight:bold;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
-}
-
-nav a{
-    text-decoration:none;
-    color:white;
-    font-weight:500;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#d1fae5;
-}
-
-/* Hero Section */
-
-.hero{
-    height:90vh;
-    background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=1500&q=80");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-    padding:20px;
-}
-
-.hero-content h1{
-    font-size:55px;
-    margin-bottom:20px;
-}
-
-.hero-content p{
-    max-width:700px;
-    margin:auto;
-    font-size:18px;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    background:#14b8a6;
-    color:white;
-    text-decoration:none;
-    padding:14px 28px;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-.btn:hover{
-    background:#0f766e;
-}
-
-/* Stats */
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    padding:50px 8%;
-    background:white;
-}
-
-.stat-card{
-    text-align:center;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.stat-card h2{
-    color:#0891b2;
-    font-size:36px;
-}
-
-/* Section Title */
-
-.section-title{
-    text-align:center;
-    margin:60px 0 30px;
-    color:#0f766e;
-    font-size:36px;
-}
-
-/* About */
-
-.about{
-    padding:20px 8%;
-    text-align:center;
-}
-
-.about p{
-    max-width:900px;
-    margin:auto;
-}
-
-/* Services */
-
-.services{
-    padding:20px 8%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.service-card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.service-card:hover{
-    transform:translateY(-10px);
-}
-
-.service-card h3{
-    color:#0891b2;
-    margin-bottom:10px;
-}
-
-/* Doctors */
-
-.doctors{
-    padding:20px 8%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.doctor-card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.doctor-card img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-}
-
-.doctor-info{
-    padding:20px;
-    text-align:center;
-}
-
-.doctor-info h3{
-    color:#0891b2;
-}
-
-/* Form */
-
-.form-section{
-    padding:20px 8%;
-}
-
-form{
-    max-width:700px;
-    margin:auto;
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-form label{
-    display:block;
-    margin-top:15px;
-    margin-bottom:5px;
-    font-weight:600;
-}
-
-form input,
-form select,
-form textarea{
-    width:100%;
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:8px;
-}
-
-form button{
-    width:100%;
-    margin-top:20px;
-    padding:14px;
-    border:none;
-    background:#0891b2;
-    color:white;
-    border-radius:8px;
-    font-size:16px;
-    cursor:pointer;
-}
-
-form button:hover{
-    background:#0f766e;
-}
-
-/* Table */
-
-.table-section{
-    padding:20px 8%;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:white;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-th{
-    background:#0891b2;
-    color:white;
-}
-
-th,td{
-    padding:15px;
-    border:1px solid #ddd;
-    text-align:center;
-}
-
-tr:nth-child(even){
-    background:#f1f5f9;
-}
-
-/* Testimonials */
-
-.testimonials{
-    padding:20px 8%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
-
-.testimonial{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-/* Contact */
-
-.contact{
-    padding:20px 8%;
-    text-align:center;
-}
-
-/* Footer */
-
-footer{
-    background:#0f172a;
-    color:white;
-    text-align:center;
-    padding:40px;
-    margin-top:50px;
-}
-
-/* Responsive */
-
-@media(max-width:768px){
-
-header{
-    flex-direction:column;
-    gap:15px;
-}
-
-nav ul{
-    flex-direction:column;
-    text-align:center;
-}
-
-.hero-content h1{
-    font-size:35px;
-}
-
-.stats{
-    grid-template-columns:1fr;
-}
-}
-</style>
-
+<title>MediCare Clinic - Tailwind CSS</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-slate-50 text-slate-800">
 
-<body>
-
-<header>
-    <div class="logo">🏥 HealthCare Clinic</div>
-
-```
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#doctors">Doctors</a></li>
-        <li><a href="#register">Register</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-```
-
+<header class="sticky top-0 bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">+</div>
+      <div>
+        <h1 class="text-xl font-bold text-blue-600">MediCare</h1>
+        <p class="text-xs text-gray-500">Clinic & Hospital</p>
+      </div>
+    </div>
+    <nav>
+      <ul class="flex gap-4 text-sm font-medium">
+        <li><a href="#" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#" class="hover:text-blue-600">About</a></li>
+        <li><a href="#" class="hover:text-blue-600">Services</a></li>
+        <li><a href="#" class="hover:text-blue-600">Doctors</a></li>
+        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Your Health Is Our Priority</h1>
-        <p>
-            Providing world-class healthcare services with
-            experienced doctors, advanced technology,
-            and compassionate patient care.
-        </p>
-        <a href="#register" class="btn">Book Appointment</a>
+<section class="bg-gradient-to-r from-blue-900 via-blue-700 to-sky-500 text-white py-24">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="uppercase tracking-widest text-sm">Trusted Healthcare Since 2005</p>
+      <h2 class="text-5xl font-bold mt-4">Your Health, <span class="text-sky-300">Our Priority</span></h2>
+      <p class="mt-6 text-lg">Advanced medical care with compassion and excellence.</p>
+      <div class="mt-8 flex gap-4">
+        <button class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold">Book Appointment</button>
+        <button class="border border-white px-6 py-3 rounded-full">Contact Us</button>
+      </div>
     </div>
-</section>
-
-<section class="stats">
-    <div class="stat-card">
-        <h2>5000+</h2>
-        <p>Patients Served</p>
+    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
+      <h3 class="text-2xl font-bold mb-4">24/7 Emergency Care</h3>
+      <p>Fully staffed emergency unit and ambulance services.</p>
     </div>
-
-```
-<div class="stat-card">
-    <h2>50+</h2>
-    <p>Specialist Doctors</p>
-</div>
-
-<div class="stat-card">
-    <h2>15+</h2>
-    <p>Years Experience</p>
-</div>
-
-<div class="stat-card">
-    <h2>24/7</h2>
-    <p>Emergency Support</p>
-</div>
-```
-
+  </div>
 </section>
 
-<h2 class="section-title">About Us</h2>
-
-<section class="about">
-    <p>
-        HealthCare Clinic is committed to providing exceptional
-        healthcare services through skilled professionals,
-        advanced medical facilities, and patient-centered care.
-    </p>
-</section>
-
-<h2 class="section-title" id="services">Our Services</h2>
-
-<section class="services">
-
-```
-<div class="service-card">
-    <h3>🩺 General Checkup</h3>
-    <p>Comprehensive health examinations.</p>
-</div>
-
-<div class="service-card">
-    <h3>🦷 Dental Care</h3>
-    <p>Modern dental treatment and oral care.</p>
-</div>
-
-<div class="service-card">
-    <h3>👁 Eye Care</h3>
-    <p>Professional eye examinations.</p>
-</div>
-
-<div class="service-card">
-    <h3>🧪 Laboratory Tests</h3>
-    <p>Fast and accurate diagnostic testing.</p>
-</div>
-
-<div class="service-card">
-    <h3>🚑 Emergency Care</h3>
-    <p>24-hour emergency medical services.</p>
-</div>
-
-<div class="service-card">
-    <h3>💉 Vaccination</h3>
-    <p>Safe vaccination for all age groups.</p>
-</div>
-```
-
-</section>
-
-<h2 class="section-title" id="doctors">Our Doctors</h2>
-
-<section class="doctors">
-
-```
-<div class="doctor-card">
-    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80">
-    <div class="doctor-info">
-        <h3>Dr. Sharma</h3>
-        <p>Cardiologist</p>
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-bold text-xl mb-3">General Checkup</h3>
+        <p>Routine health examinations and consultation.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-bold text-xl mb-3">Emergency Care</h3>
+        <p>24/7 trauma and emergency support.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-bold text-xl mb-3">Dental Care</h3>
+        <p>Complete oral health solutions.</p>
+      </div>
     </div>
-</div>
-
-<div class="doctor-card">
-    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80">
-    <div class="doctor-info">
-        <h3>Dr. Karki</h3>
-        <p>Dentist</p>
-    </div>
-</div>
-
-<div class="doctor-card">
-    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80">
-    <div class="doctor-info">
-        <h3>Dr. Thapa</h3>
-        <p>Eye Specialist</p>
-    </div>
-</div>
-```
-
+  </div>
 </section>
 
-<h2 class="section-title" id="register">Patient Registration</h2>
-
-<section class="form-section">
-
-<form>
-
-<label>Full Name</label> <input type="text" required>
-
-<label>Email</label> <input type="email" required>
-
-<label>Phone Number</label> <input type="tel" required>
-
-<label>Age</label> <input type="number" required>
-
-<label>Gender</label> <select required>
-
-<option>Select Gender</option>
-<option>Male</option>
-<option>Female</option>
-<option>Other</option>
-</select>
-
-<label>Address</label>
-
-<textarea rows="4"></textarea>
-
-<button type="submit">Register Patient</button>
-
-</form>
-
-</section>
-
-<h2 class="section-title">Today's Appointments</h2>
-
-<section class="table-section">
-
-<table>
-<tr>
-<th>Patient</th>
-<th>Doctor</th>
-<th>Date</th>
-<th>Time</th>
-</tr>
-
-<tr>
-<td>Rahul</td>
-<td>Dr. Sharma</td>
-<td>24/06/2026</td>
-<td>10:00 AM</td>
-</tr>
-
-<tr>
-<td>Sita</td>
-<td>Dr. Karki</td>
-<td>24/06/2026</td>
-<td>11:00 AM</td>
-</tr>
-
-<tr>
-<td>Ram</td>
-<td>Dr. Thapa</td>
-<td>24/06/2026</td>
-<td>01:00 PM</td>
-</tr>
-</table>
-
-</section>
-
-<h2 class="section-title">Patient Testimonials</h2>
-
-<section class="testimonials">
-
-<div class="testimonial">
-    <p>
-        Excellent service and professional doctors.
-        Highly recommended.
-    </p>
-    <strong>- Rahul</strong>
-</div>
-
-<div class="testimonial">
-    <p>
-        Friendly staff and quick appointment process.
-    </p>
-    <strong>- Sita</strong>
-</div>
-
-<div class="testimonial">
-    <p>
-        Clean environment and quality treatment.
-    </p>
-    <strong>- Ram</strong>
-</div>
-
-</section>
-
-<h2 class="section-title" id="contact">Contact Us</h2>
-
-<section class="contact">
-    <p>📍 Kathmandu, Nepal</p>
-    <p>📞 +977-9800000000</p>
-    <p>✉ info@healthcareclinic.com</p>
-</section>
-
-<footer>
-    <h3>HealthCare Clinic</h3>
-    <p>Providing Quality Healthcare Services Since 2010</p>
+<footer class="bg-slate-900 text-white py-8 text-center">
+  <p>© 2026 MediCare Clinic. All Rights Reserved.</p>
 </footer>
 
 </body>
