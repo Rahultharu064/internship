@@ -4,7 +4,7 @@
 // var age =22;
 // var age =23;
 // let age= 23;
-// age =24;
+// let  age =24;
 // console.log(age);
 // const pie=3.14;
 
@@ -52,9 +52,10 @@ let age = 22;
 
  // logical operators
 //%% ||
+// ||  
  let ag=22;
  let citizen=false;
- console.log(ag>=18 || citizen==true); //example of the logical operators
+ console.log(ag>=18 && citizen==true); //example of the logical operators
 
  // assignment operators is all about increment and decrement
  let a=5;
