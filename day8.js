@@ -15,10 +15,10 @@
 
  // example of the while loop
   
-//  let count1=11;
+//  let count1=6;
 //  while(count1<=10){
-//     console.log(" Number are"+count);
-//     count1++
+//     console.log(" Number are"+count); 6,7
+//     count1++; 7+1=8
 //  }
 
 
@@ -27,8 +27,8 @@
 //  // first time yelei code lei execute garxa ani matra yele condition check garxa
 // //  let  count=12
 // //   do{
-// //     console.log( "the number are"+count)
-// //     count--;
+// //     console.log( "the number are"+count) 12,11,10
+// //     count--;10-1=9
 // //     //10
 
 // //   }while(count>=10)
@@ -100,14 +100,14 @@
 
 // object 
 
- // object vaneko collection of related data stored garnu 
+ // object vaneko collection of related data stored garne process and  technique ho
 //  let student={
 //     name:"rahul",
 //     age:"21",
 //     faculty:"Bit",
 //     college:"INC"
 //  }
-
+// console.log(student)
 // //  console.log(student.age) //object ko value access garna saina
 
 //  student.address="itahari"; // adding new key and value in objects
