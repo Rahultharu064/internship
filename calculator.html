@@ -90,17 +90,17 @@
 
     // Add value to display
     function appendToDisplay(value) {
-        display.value += value;
+        display.value += value; // Append the value to the display
     }
 
     // Clear display
     function clearDisplay() {
-        display.value = "";
+        display.value = "";  // this helps to clear the display when the user clicks on the "AC" button
     }
 
     // Remove last character
     function backspace() {
-        display.value = display.value.slice(0, -1);
+        display.value = display.value.slice(0, -1);  // this helps to remove the last character from the display when the user clicks on the "⌫" button
     }
 
     // Calculate result
@@ -110,12 +110,15 @@
             let expression = display.value;
 
             // Convert calculator symbols into JavaScript operators
-            expression = expression.replace(/×/g, "*");
+            expression = expression.replace(/×/g, "*");    //  // this expression tells the javascript that is  a expression and  g hehlps to replace the sybols globally not  just  the forst one
             expression = expression.replace(/÷/g, "/");
             expression = expression.replace(/−/g, "-");
             expression = expression.replace(/%/g, "/100");
 
-            display.value = eval(expression);
+            display.value = eval(expression);  
+            // eval is used to provide me the result of the expression that is entered in the display
+
+            // 10+ 20*30 ="610" 
 
         } catch (error) {
             display.value = "Error";
@@ -125,7 +128,7 @@
     // Keyboard support
     document.addEventListener("keydown", function (event) {
 
-        const key = event.key;
+        const key = event.key;  // Get the key that was pressed
 
         // Numbers
         if (key >= "0" && key <= "9") {

@@ -18,22 +18,28 @@ let fruits=["apple","mango","orange","banana"] //[0,1,2,3 ]
 // fruits.splice(1,2) // it removes the element from the array and also we can add new element in the array
 // console.log(fruits)
 
+
+//slice method  it returns a new array containing the elements from the original array
+// let newfruits=fruits.slice(1,3) // it returns a new array containing the elements from the original array (starting from index 1 to index 3)
+// console.log(newfruits) // it returns a new array containing the elements from the original array
+
+
 // forEach loop method     its loopps throughan array
 // fruits.forEach(function(fruit){
 //     console.log("the fruit is "+fruit)  //
 // })
 
 // map array method  its helps us to return new array by loop  thorugh  each element
-let upper=fruits.map(function(fruit){
-    console.log("the fruits are"+fruit)
-    return fruit.toUpperCase() // it returns new array with all the elements in uppercase
-})
-console.log(upper) // it returns new array with all the elements in uppercase
+// let upper=fruits.map(function(fruit){
+//     console.log("the fruits are"+fruit)
+//     return fruit.toUpperCase() // it returns new array with all the elements in uppercase
+// })
+// console.log(upper) // it returns new array with all the elements in uppercase
 
 
 
-/// filter method  it returns new array containing only the  elements that satisfy the conditions
-let number=[1,2,3,4,5,,6,7,8,9,10]
+// /// filter method  it returns new array containing only the  elements that satisfy the conditions
+// let number=[1,2,3,4,5,,6,7,8,9,10]
 // let evennumber=number.filter(function(num){
 //     return num%2!==0;
 // })
@@ -48,14 +54,25 @@ let number=[1,2,3,4,5,,6,7,8,9,10]
 // console.log(nummm)
 
 
-let totalnumber=number.reduce(function(initial,num){ //(6,4)
-    return initial+num; //  0+1=1, 1+2=3, 3+3=6, 6+4=10, 10+5=15, 15+6=21, 21+7=28, 28+8=36, 36+9=45, 45+10=55
-},6) // initial value of total is 0
+// let totalnumber=number.reduce(function(initial,num){ //(6,4)
+//     return initial+num; //  0+1=1, 1+2=3, 3+3=6, 6+4=10, 10+5=15, 15+6=21, 21+7=28, 28+8=36, 36+9=45, 45+10=55
+// },6) // initial value of total is 0
 
-console.log(totalnumber)  // it returns the sum of all the elements in the array
+// console.log(totalnumber)  // it returns the sum of all the elements in the array
 
+
+// replace array method it helps us to replace the element in the array
+
+//    let replaces=fruits.replace("apple","strawberry")
+//    console.log(replaces)
+
+
+   
 
 
 
 
    
+ let text ="i love javascript"
+ let newtext=text.replace("javascript","python") // it helps us to replace the element in the string
+ console.log(newtext)
