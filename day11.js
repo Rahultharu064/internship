@@ -88,6 +88,6 @@ async function display(){
 display();
 
 
-
-
+// fetch api  is a built in jvascript api used to send http request to a server and receice data from it.
+// it
 
