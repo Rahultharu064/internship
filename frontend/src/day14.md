@@ -116,6 +116,12 @@ step 3  creating consumer to consume the data
  //useMemo
  //useRef
 
+ App()----Navbar()----Menu()-----prof()
+
+
+
+ /// using fetch api 
+
 
 
 
