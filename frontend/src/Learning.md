@@ -124,6 +124,78 @@ step 3  creating consumer to consume the data
 
 
 
+// event handling 
+it is the process of the responding the user actions sucha as clicking a button, typing in an input field, hovering over an element , or submitting a form
+
+user action click(button) ----  function executes(handleClick()) ----- ui updates( button has been clicked!) 
+
+
+
+// forms 
+it is used to collect information form users
+//login page
+// signup page
+//contactus page
+
+
+
+
+flow of react form
+user types (rahul) --- onChange()-- updates state (usestate("))-- input value cahnages --- ui updates
+//controlled componensts
+A controlled components is an input element whose value is controlled by react state
+why controlled components?
+-- easy validation
+-- easy form submission
+-- real time updates
+-- better data management 
+
+
+//// react-router-dom
+
+it is a library that enables client side routing in react applications.
+
+it allows user to navigate between pages without relaoding the entire browser pages.
+
+npm insall react-router-dom
+
+/// createBrowserRouter 
+It is a function provided by React router dom that creates a router object by defining all applications routes in one place
+
+
+old method 
+<BrowserRouter>
+<Routes>// <App />
+<Route     >
+
+
+new method syntax 
+const router= createBrowserRouter([
+
+
+
+
+
+])
+
+
+features of createBrowserRouter
+- cleaner
+-- more scalable (update,delete)
+-- better for large applications
+-- supports loaders and actions
+  
+  Mall
+  |
+  |--- Home
+
+  |---- About
+  |
+
+
+
+<Outlet />  // is a placeholder that helps react where to displa the math child route. 
+
 
 
 

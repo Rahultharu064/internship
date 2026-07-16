@@ -4,20 +4,22 @@
 // var age =22;
 // var age =23;
 // let age= 23;
-// let  age =24;
+ age =24;
 // console.log(age);
 // const pie=3.14;
+// const accc = "dkhafkejsh"
+// console.log(accc)
 
 
 
 // data types
-let number =23.567; // number 
-const name ="Rahultharu064"; //string
-let isloggedin =true; // boolean
-let city;
-let user= null;
- console.log(typeof name);
- console.log(typeof city);
+// let number =23.567; // number 
+// const name ="Rahultharu064"; //string
+// let isloggedin =true; // boolean
+// let city;// undefined
+// let user= null;
+//  console.log(typeof name);
+//  console.log(typeof city);
 
  //operations
 
@@ -46,20 +48,23 @@ let user= null;
 let age = 22;
  console.log(age==22); // checking equal to 
  console.log(age!=22); // checking not equal to 
+ console.log(age>22)
  console.log(age>=45);  // checking greater than equal to 
  console.log(age<=10); // checkimg  less than equal to
 
-
+  
  // logical operators
-//%% ||
-// ||  
+//&& || and operator only gives ture when the both conditions are true 
+// ||  or operator  any one conditions true then it gives us true value
  let ag=22;
- let citizen=false;
- console.log(ag>=18 && citizen==true); //example of the logical operators
+ let voter=false;
+ console.log(ag>=18 || voter==true); //example of the logical operators
 
  // assignment operators is all about increment and decrement
  let a=5;
- a-=20;
+ a-=20 // 20-5 =15
+//  let a=5;
+//  a-=20; 
  console.log(a)
 
 
@@ -68,7 +73,7 @@ let age = 22;
 
   // voting elegible xu ki xuena
 
-  if(age44>=18){
+  if(age44>=18){  
     console.log("yes you are eleigible for the voting");
   }
   else{

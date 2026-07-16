@@ -72,8 +72,10 @@
 
 //   // function with expression
 //   const sayhello= function (){
+
 //     console.log("helo function with argument")
 //   }
+let a=10;
 
 
 
@@ -101,6 +103,22 @@
 // object 
 
  // object vaneko collection of related data stored garne process and  technique ho
+
+
+ let student1={
+
+
+   name:"Rahul",
+   age:22,
+   faculty:"BIT"
+ }
+ console.log(student1)
+student1.address="itahari" // adding the key and value
+student1.age=23; // updating the value 
+delete student1.name // deleteing the key and value
+
+
+
 //  let student={
 //     name:"rahul",
 //     age:"21",
@@ -119,6 +137,11 @@
 
   // array
    // array vaneko multiple values single variable ma store garna use garinxa
+
+   let vegetables=["potato","tomato", "cauli"]
+   console.log(vetetables)
+
+   
 
    let fruits=["Apple","mango","orange","banana"] //[0,1,2,3]
 //    console.log(fruits[0])
