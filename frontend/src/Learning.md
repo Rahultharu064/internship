@@ -197,6 +197,26 @@ features of createBrowserRouter
 <Outlet />  // is a placeholder that helps react where to displa the math child route. 
 
 
+// axios  
+it is a javascript library used to send HTTP requests to apis or server
+why axios?
+--cleaner syntax
+-- automatic JSON conversion
+-- better error handling
+-- request and response inerceptors
+npm install axios
+
+fetch api 
+fetch("")
+.then(response=> response.json())
+.then(data=>console.log(data))
+
+
+Axios
+axios.get("")
+.then(reponse=>console.log(response.data))
+
+
 
 
 
